@@ -43,14 +43,14 @@ whitelist-item-ids:
 Main command for managing the drop whitelist.
 
 ### Subcommands:
-`/dropwhitelist reload`: Reloads the configuration file.
-`/dropwhitelist addDisplayName <name>`: Adds a display name to the whitelist.
-`/dropwhitelist removeDisplayName <name>`: Removes a display name from the whitelist.
-`/dropwhitelist addMaterial <name>`: Adds a material ID to the whitelist.
-`/dropwhitelist removeMaterial <name>`: Removes a material ID from the whitelist.
-`/dropwhitelist listDisplayNames`: Lists all whitelisted display names.
-`/dropwhitelist listMaterials`: Lists all whitelisted materials.
-`/dropwhitelist toggleKeepItems`: Toggles the option for players to keep their whitelisted items upon respawn.
+- `/dropwhitelist reload`: Reloads the configuration file.
+- `/dropwhitelist addDisplayName <name>`: Adds a display name to the whitelist.
+- `/dropwhitelist removeDisplayName <name>`: Removes a display name from the whitelist.
+- `/dropwhitelist addMaterial <name>`: Adds a material ID to the whitelist.
+- `/dropwhitelist removeMaterial <name>`: Removes a material ID from the whitelist.
+- `/dropwhitelist listDisplayNames`: Lists all whitelisted display names.
+- `/dropwhitelist listMaterials`: Lists all whitelisted materials.
+- `/dropwhitelist toggleKeepItems`: Toggles the option for players to keep their whitelisted items upon respawn.
 
 ## Usage
 - Adding an Item: To add a display name to the whitelist, use the command `/dropwhitelist addDisplayName <item_name>`.
