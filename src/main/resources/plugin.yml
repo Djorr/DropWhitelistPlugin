@@ -1,7 +1,7 @@
 name: DropWhitelist
 version: 1.0
 main: nl.rubixdevelopment.dropwhitelist.DropWhitelistPlugin
-api-version: 1.21
+api-version: 1.12.2
 commands:
   dropwhitelist:
     description: "Manage the drop whitelist"
