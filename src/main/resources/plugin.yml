@@ -1,9 +1,9 @@
 name: DropWhitelist
 version: 1.0
 main: nl.rubixdevelopment.dropwhitelist.DropWhitelistPlugin
-api-version: 1.21
+api-version: 1.18 # Change this line to match your server version
 commands:
   dropwhitelist:
     description: "Manage the drop whitelist"
-    usage: "/dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials|toggleKeepItems>"
+    usage: "/dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials>"
     aliases: [dw]

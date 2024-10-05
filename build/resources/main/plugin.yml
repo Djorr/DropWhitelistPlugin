@@ -1,9 +1,0 @@
-name: DropWhitelist
-version: 1.0
-main: nl.rubixdevelopment.dropwhitelist.DropWhitelistPlugin
-api-version: 1.21
-commands:
-  dropwhitelist:
-    description: "Manage the drop whitelist"
-    usage: "/dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials|toggleKeepItems>"
-    aliases: [dw]
