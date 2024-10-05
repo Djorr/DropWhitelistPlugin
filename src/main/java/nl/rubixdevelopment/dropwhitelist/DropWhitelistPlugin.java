@@ -18,6 +18,9 @@ public class DropWhitelistPlugin extends JavaPlugin {
         getCommand("dropwhitelist").setTabCompleter(commandHandler);
 
         getLogger().info("DropWhitelist plugin enabled!");
+
+        int pluginId = 23542; // <-- Replace with the id of your plugin!
+        Metrics metrics = new Metrics(this, pluginId);
     }
 
     @Override
