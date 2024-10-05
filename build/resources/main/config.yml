@@ -1,0 +1,8 @@
+# List of item display names that should not be dropped on player death
+whitelist-item-names:
+  - "Diamond Sword"
+  - "Special Axe"
+
+# List of item IDs (Materials) that should not be dropped on player death
+# You can find material names at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+whitelist-item-ids: []

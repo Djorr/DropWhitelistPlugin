@@ -1,0 +1,9 @@
+name: DropWhitelist
+version: 1.0
+main: com.example.dropwhitelist.DropWhitelistPlugin
+api-version: 1.8
+commands:
+  dropwhitelist:
+    description: "Manage the drop whitelist"
+    usage: "/dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials>"
+    aliases: [dw]
