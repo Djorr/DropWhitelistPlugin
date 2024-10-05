@@ -11,6 +11,7 @@ public class ConfigManager {
     private final DropWhitelistPlugin plugin;
     private Set<String> displayNameWhitelist;
     private Set<Material> materialWhitelist;
+    private boolean keepWhitelistedItems;
 
     public ConfigManager(DropWhitelistPlugin plugin) {
         this.plugin = plugin;
@@ -32,6 +33,8 @@ public class ConfigManager {
             }
         }
 
+        keepWhitelistedItems = config.getBoolean("keep-whitelisted-items", true);
+
         plugin.getLogger().info("Loaded " + displayNameWhitelist.size() + " whitelisted display names.");
         plugin.getLogger().info("Loaded " + materialWhitelist.size() + " whitelisted item IDs.");
     }
@@ -42,6 +45,10 @@ public class ConfigManager {
 
     public Set<Material> getMaterialWhitelist() {
         return materialWhitelist;
+    }
+
+    public boolean isKeepWhitelistedItems() {
+        return keepWhitelistedItems;
     }
 
     public void saveConfig() {

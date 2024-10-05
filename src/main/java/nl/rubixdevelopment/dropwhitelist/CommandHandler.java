@@ -25,7 +25,7 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (command.getName().equalsIgnoreCase("dropwhitelist")) {
             if (args.length == 0) {
-                sender.sendMessage(ChatColor.RED + "DropWhitelist » Usage: /dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials>");
+                sender.sendMessage(ChatColor.RED + "DropWhitelist » Usage: /dropwhitelist <reload|addDisplayName|removeDisplayName|addMaterial|removeMaterial|listDisplayNames|listMaterials|toggleKeepItems>");
                 return true;
             }
 
@@ -46,12 +46,22 @@ public class CommandHandler implements CommandExecutor, TabCompleter {
                     return handleListDisplayNames(sender);
                 case "listmaterials":
                     return handleListMaterials(sender);
+                case "togglekeepitems":
+                    return handleToggleKeepItems(sender);
                 default:
                     sender.sendMessage(ChatColor.RED + "DropWhitelist » Unknown subcommand.");
                     return true;
             }
         }
         return false;
+    }
+
+    private boolean handleToggleKeepItems(CommandSender sender) {
+        boolean currentValue = configManager.isKeepWhitelistedItems();
+        plugin.getConfig().set("keep-whitelisted-items", !currentValue);
+        configManager.saveConfig();
+        sender.sendMessage(ChatColor.GREEN + "DropWhitelist » Whitelisted items on respawn is now " + (currentValue ? "disabled" : "enabled") + ".");
+        return true;
     }
 
     private boolean handleAddDisplayName(CommandSender sender, String[] args) {

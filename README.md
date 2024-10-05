@@ -50,15 +50,14 @@ Main command for managing the drop whitelist.
 `/dropwhitelist removeMaterial <name>`: Removes a material ID from the whitelist.
 `/dropwhitelist listDisplayNames`: Lists all whitelisted display names.
 `/dropwhitelist listMaterials`: Lists all whitelisted materials.
+`/dropwhitelist toggleKeepItems`: Toggles the option for players to keep their whitelisted items upon respawn.
 
 ## Usage
-Adding an Item: To add a display name to the whitelist, use the command `/dropwhitelist addDisplayName <item_name>`.
-
-Removing an Item: To remove a display name, use `/dropwhitelist removeDisplayName <item_name>`.
-
-Reloading the Config: If you make changes to the config.yml, remember to run `/dropwhitelist reload` to apply those changes.
-
-Listing Items: Use `/dropwhitelist listDisplayNames` or `/dropwhitelist listMaterials` to view the current whitelisted items.
+- Adding an Item: To add a display name to the whitelist, use the command `/dropwhitelist addDisplayName <item_name>`.
+- Removing an Item: To remove a display name, use `/dropwhitelist removeDisplayName <item_name>`.
+- Reloading the Config: If you make changes to the config.yml, remember to run `/dropwhitelist reload` to apply those changes.
+- Listing Items: Use `/dropwhitelist listDisplayNames` or `/dropwhitelist listMaterials` to view the current whitelisted items.
+- Toggle Keeping Items: To toggle the setting that allows players to keep whitelisted items upon respawn, use `/dropwhitelist toggleKeepItems`.
 
 ## License
 This plugin is licensed under a custom license that allows you to:
