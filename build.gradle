@@ -5,6 +5,8 @@ plugins {
 group = 'nl.rubixdevelopment'
 version = '1.0'
 
+def minecraftVersion = '1.18.2' // Define the Minecraft version
+
 repositories {
     mavenCentral()
 
@@ -22,8 +24,8 @@ repositories {
 }
 
 dependencies {
-    // Use Spigot API for 1.18.2
-    compileOnly "org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT"
+    // Use Spigot API for the specific Minecraft version
+    compileOnly "org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT"
 }
 
 def targetJavaVersion = 17
@@ -51,4 +53,11 @@ processResources {
     filesMatching('plugin.yml') {
         expand props
     }
+}
+
+// Custom jar file name with Minecraft version
+jar {
+    archiveBaseName.set('DropWhitelist')
+    archiveVersion.set("${version}-${minecraftVersion}")
+    archiveFileName.set("${archiveBaseName.get()}-${archiveVersion.get()}.jar")
 }
