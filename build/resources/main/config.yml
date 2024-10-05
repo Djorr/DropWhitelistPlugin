@@ -4,5 +4,7 @@ whitelist-item-names:
   - "Special Axe"
 
 # List of item IDs (Materials) that should not be dropped on player death
-# You can find material names at https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
 whitelist-item-ids: []
+
+# Option to allow players to keep whitelisted items on respawn
+keep-whitelisted-items: true
