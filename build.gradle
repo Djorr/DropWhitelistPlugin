@@ -5,12 +5,12 @@ plugins {
 group = 'nl.rubixdevelopment'
 version = '1.0'
 
-def minecraftVersion = '1.12.2' // Define the Minecraft version
+def minecraftVersion = '1.17.1' // Define the Minecraft version
 
 repositories {
     mavenCentral()
 
-    // Spigot's repository for 1.12.2
+    // Spigot's repository for 1.17.1
     maven {
         name = "spigotmc-repo"
         url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
@@ -24,11 +24,11 @@ repositories {
 }
 
 dependencies {
-    // Use Spigot API for Minecraft 1.12.2
+    // Use Spigot API for Minecraft 1.17.1
     compileOnly "org.spigotmc:spigot-api:${minecraftVersion}-R0.1-SNAPSHOT"
 }
 
-def targetJavaVersion = 8 // Set Java version to 8 for Minecraft 1.12.2
+def targetJavaVersion = 16 // Set Java version to 16 for Minecraft 1.17.1
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
