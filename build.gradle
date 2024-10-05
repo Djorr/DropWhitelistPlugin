@@ -8,7 +8,7 @@ version = '1.0'
 repositories {
     mavenCentral()
 
-    // Spigot's repository for older versions like 1.8.8
+    // Spigot's repository for newer versions like 1.18.2
     maven {
         name = "spigotmc-repo"
         url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/"
@@ -22,11 +22,11 @@ repositories {
 }
 
 dependencies {
-    // Use Spigot for 1.8.8
-    compileOnly "org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT"
+    // Use Spigot API for 1.18.2
+    compileOnly "org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT"
 }
 
-def targetJavaVersion = 8
+def targetJavaVersion = 17
 java {
     def javaVersion = JavaVersion.toVersion(targetJavaVersion)
     sourceCompatibility = javaVersion
